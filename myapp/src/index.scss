@@ -1,0 +1,93 @@
+@import "./lib/reset.scss";
+
+html,body,#root,.App {
+  @include rect(100%,100%);
+}
+.App {
+  @include flexbox();
+  @include flex-direction(column);
+  .container{
+    @include flex();
+    @include rect(100%,auto);
+    @include overflow(hidden);
+    .box {
+      @include rect(100%,100%);
+      @include flexbox();
+      @include flex-direction(column);
+      header{
+        @include rect(100%,0.44rem);
+        @include background-color(rgb(253, 207, 147));
+      }
+      .content{
+        @include flex();
+        @include rect(100%,auto);
+        @include overflow();
+      }
+    }
+    // 首页
+    .home_box{
+      header {
+        padding: 0 0.12rem;
+        .homeTop {
+          @include rect(2.6rem,0.25rem);
+          @include background-color(#efefef);
+          border-radius: 0.15rem;
+          line-height: 0.25rem;
+          margin-top: 0.09rem;
+          float: left;
+          span {
+            float: left;
+            @include rect(0.4rem,0.25rem);
+            text-align: center;
+            color: #a8b0b7;
+            font-size: 0.18rem;
+          }
+          input {
+            @include rect(80%,100%);
+            border: none;
+            float: left;
+            font-size: 0.1rem;
+            line-height: 0.25rem;
+            @include background-color(#efefef);
+          }
+        }
+        p {
+          @include rect(0.2rem,0.25rem);
+          float: right;
+          font-size: 0.2rem;
+          margin-top: 0.08rem;
+        }
+      }
+    }
+  }
+  footer{
+    @include rect(100%,0.5rem);
+    @include background-color(#fff);
+    border-top: 1px solid #e6e6e6;
+    ul{
+      @include rect(100%,100%);
+      @include flexbox();
+      li{
+        @include flex();
+        @include rect(auto,100%);
+        a{
+          @include text-color(#333);
+          @include rect(100%,100%);
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+            span {
+              @include font-size(0.22rem);
+            }
+            p{
+              @include font-size(0.12rem);
+            }
+            &.active {
+              @include text-color(#e60012);
+            }
+        }
+      }
+    }
+  }
+}
