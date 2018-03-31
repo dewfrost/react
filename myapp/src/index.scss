@@ -59,7 +59,223 @@ html,body,#root,.App {
         }
       }
     }
+
+
+
+    // 商家
+    .merchant_box{
+      // 商家头部
+      header {
+        padding: 0 0.12rem;
+        background-color: #fff;
+        border-bottom: 1px solid #e6e6e6;
+        .merchantTop {
+          @include rect(2.6rem,0.25rem);
+          @include background-color(#efefef);
+          border-radius: 0.15rem;
+          line-height: 0.25rem;
+          margin-top: 0.09rem;
+          float: left;
+          span {
+            float: left;
+            @include rect(0.4rem,0.25rem);
+            text-align: center;
+            color: #a8b0b7;
+            font-size: 0.18rem;
+          }
+          // 商家搜索框
+          input {
+            @include rect(80%,100%);
+            border: none;
+            float: left;
+            font-size: 0.13rem;
+            line-height: 0.25rem;
+            @include background-color(#efefef);
+          }
+        }
+        // “搜索”文字
+        p {
+          @include rect(0.3rem,0.25rem);
+          float: right;
+          font-size: 0.13rem;
+          margin-top: 0.09rem;
+          text-align: center;
+          line-height: 0.25rem;
+          color: #767d85;
+        }
+      }
+      // 以下为商家页面内容区
+      .merchant_content{
+        ul{
+          @include flex();
+          @include rect(100%,auto);
+          li{
+            margin-bottom: 0.05rem;
+            a{
+              display: block;
+              height: 100%;
+              text-decoration: none;
+              color: #333;
+              // 店铺图片
+              .itemImg {
+                width: 100%;
+                height: 1.8rem;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                  height: 1.8rem;
+                }
+              }
+              .itemCon {
+                // 详情文字介绍
+                .itemTxt {
+                  height: 0.36rem;
+                  padding: 0.1rem 6% 0;
+                  p{
+                    @include rect(1.9rem,0.24rem);
+                    color: #333;
+                    padding-top: 0;
+                    font-size: 0.14rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    float: left;
+                  }
+                  // 省会地址
+                  span {
+                    display: block;
+                    padding-top: 0;
+                    font-size: 0.1rem;
+                    color: #e81627;
+                    height: 0.24rem;
+                    line-height: 24px;
+                    width: 30%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: center;
+                    float: right;
+                  }
+                }
+                // 店铺详情按钮
+                button {
+                  display: block;
+                  width: 100%;
+                  height: 0.3rem;
+                  background-color: #e60012;
+                  color: #fff;
+                  font-size: 0.12rem;
+                  border-radius: 0.03rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    // 购物车
+    .cart_box{
+      background-color: #f5f5f5;
+      // 购物车头部
+      header {
+        height: 0.4rem;
+        line-height: 0.4rem;
+        border-bottom: 1px solid #e6e6e6;
+        position: relative;
+        background-color: #fff;
+        h3{
+          color: #333;
+          text-align: center;
+          font-size: 0.16rem;
+          font-weight: normal;
+        }
+        // 头部编辑
+        span{
+          display: block;
+          color: #333;
+          font-size: 0.13rem;
+          padding-right: 0.15rem;
+          position: absolute;
+          top: 0;
+          right: 0
+        }
+      }
+      // 购物车页面内容区
+      .cart_content{
+        // 商品列表
+        ul{
+          @include flex();
+          @include rect(100%,auto);
+          li{
+            height: 1rem;
+            border-bottom: 0.01rem solid #eaeaea;
+            margin-top: 0.12rem;
+            background-color: #fff;
+            overflow: hidden;
+            @include flexbox();
+            justify-content: space-around;
+            align-items: center;
+            i{
+              display: block;
+              float: left;
+              color: #a7a7a7;
+              font-size: 0.17rem;
+              line-height: 0.9rem;
+              width: 9%;
+              margin-left: 0.03rem;
+            }
+            img{
+              display: block;
+              float: left;
+              width: 0.85rem;
+              height: 0.8rem;
+              border-radius: 0.03rem;
+            }
+            // 商品列表信息
+            .carCon {
+              width: 55%;
+              height: 0.8rem;
+              float: right;
+              // 商品标题
+              .title{
+                height: 0.4rem;
+                line-height: 0.2rem;
+                font-size: 0.12rem;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 0.2rem;
+              }
+              .priceAndnum{
+                @include rect(100%,auto);
+                @include flexbox();
+                justify-content: space-between;
+                align-items: center;
+                .price{
+                  font-size: 0.12rem;
+                  color: #e81627;
+                }
+                .num{
+                  font-size: 16px;
+                  color: #666;
+                }
+              }
+            }
+          }
+        }
+        // 内容区结算底部
+        .goodsFooter{
+          
+        }
+      }
+      
+    }
   }
+
+  // 以下为公用底部
   footer{
     @include rect(100%,0.5rem);
     @include background-color(#fff);

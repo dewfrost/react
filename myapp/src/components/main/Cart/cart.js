@@ -7,12 +7,43 @@ class Model extends Component {
   }
   render() {
     return (
-      <div className ="box">
+      <div className ="box cart_box">
+      {/* 头部 */}
         <header>
-
+          <h3>购物车</h3>
+          <span>编辑</span>
         </header>
-        <div className = "content">
-          购物车
+        {/* 购物车内容区 */}
+        <div className = "content cart_content">
+          <ul className="con_Ul">
+          {/* 商品列表 */}
+            <li className="goodsList">
+              <i className="iconfont icon-xuanze-moren"></i>
+              <img src="https://admin.oto178.com/uploads/20180320/f1112eee3f5ff7494c38934c7c276825.jpg" alt=""/>
+              <div className="carCon">
+              {/* 商品标题 */}
+                <p className="title">沐晨25蓝包原生木浆抽纸</p>
+                <div className="priceAndnum">
+                {/* 商品价格 */}
+                  <span className="price">
+                    ￥
+                    <em>39.90</em>
+                  </span>
+                  {/* 商品数量 */}
+                  <span className="num">
+                    x
+                    <em>1</em>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          {/* 商品结算区 */}
+          <div className="goodsFooter">
+            <i iconfont icon-xuanze-moren></i>
+            <span></span>
+            <div></div>
+          </div>
         </div>
       </div>
     )
