@@ -61,7 +61,6 @@ html,body,#root,.App {
     }
 
 
-
     // 商家
     .merchant_box{
       // 商家头部
@@ -218,6 +217,7 @@ html,body,#root,.App {
             @include flexbox();
             justify-content: space-around;
             align-items: center;
+            // iconfont勾选器
             i{
               display: block;
               float: left;
@@ -254,13 +254,52 @@ html,body,#root,.App {
                 @include flexbox();
                 justify-content: space-between;
                 align-items: center;
+                // 商品价格
                 .price{
                   font-size: 0.12rem;
                   color: #e81627;
                 }
+                // 商品数量
                 .num{
                   font-size: 16px;
                   color: #666;
+                }
+                // 动态增加商品数量
+                .number{
+                  width: 52%;
+                  height: 0.2rem;
+                  line-height: 0.2rem;
+                  border: 1px solid #e6e6e6;
+                  display: none;
+                  span{
+                    display: block;
+                    float: left;
+                    width: 23%;
+                    height: 100%;
+                    text-align: center;
+                    
+                    font-size: 0.12rem;
+                  }
+                  input{
+                    width: 52%;
+                    border: 0;
+                    border-left: 1px solid #e6e6e6;
+                    border-right: 1px solid #e6e6e6;
+                    height: 75%;
+                    box-sizing: border-box;
+                    display: block;
+                    float: left;
+                    font-size: 0.14rem;
+                    text-align: center;
+                    color: #333;
+                    background: none;
+                    line-height: 0.14rem;
+                    background-color: #fff;
+                    margin-top: 3%
+                  }
+                  .icon-jiahao{
+                    color: #e60012;
+                  }
                 }
               }
             }
@@ -268,11 +307,57 @@ html,body,#root,.App {
         }
         // 内容区结算底部
         .goodsFooter{
-          
+          position: fixed;
+          bottom: 0.5rem;
+          left: 0;
+          width: 100%;
+          height: 0.4rem;
+          line-height: 0.4rem;
+          background-color: #fff;
+          border-top: 1px solid #e6e6e6;
+          i{
+            display: block;
+            float: left;
+            color: #a7a7a7;
+            font-size: 0.17rem;
+            line-height: 0.4rem;
+            width: 9%;
+            margin-left: 0.06rem;
+          }
+          span{
+            display: block;
+            float: left;
+            font-size: 0.14rem;
+            line-height: 0.4rem;
+            em{
+              color: #d82102;
+              font-size: 0.12rem;
+            }
+          }
+          // 全选
+          .allSelect{
+            font-size: 0.14rem;
+            margin-left: 0.05rem;
+            display: none;
+          }
+          // 结算按钮
+          button{
+            @include rect(0.8rem,0.4rem);
+            display: block;
+            float: right;
+            background: #f10215;
+            font-size: 14px;
+            color: #fff;
+            margin-left: 0.05rem;
+            padding: 0;
+            line-height: 0.4rem;
+            border: none;
+          }
         }
       }
       
     }
+
   }
 
   // 以下为公用底部
@@ -307,3 +392,4 @@ html,body,#root,.App {
     }
   }
 }
+

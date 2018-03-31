@@ -1,0 +1,102 @@
+@import "./lib/reset.scss";
+
+  // 搜索页面
+  .search_box{
+    @include rect(100%,100%);
+    @include flexbox();
+    @include flex-direction(column);
+    background-color: #f5f5f5;
+    // 搜索头部
+    header {
+      @include rect(100%,0.44rem);
+      @include background-color(rgb(255, 255, 255));
+      padding: 0 0.12rem;
+      .searchTop {
+        @include rect(2.6rem,0.25rem);
+        @include background-color(#efefef);
+        border-radius: 0.15rem;
+        line-height: 0.25rem;
+        margin-top: 0.09rem;
+        float: left;
+        span {
+          float: left;
+          @include rect(0.4rem,0.25rem);
+          text-align: center;
+          color: #a8b0b7;
+          font-size: 0.18rem;
+        }
+        input {
+          @include rect(80%,100%);
+          border: none;
+          float: left;
+          font-size: 0.1rem;
+          line-height: 0.25rem;
+          @include background-color(#efefef);
+        }
+      }
+      p {
+        @include rect(0.3rem,0.25rem);
+        float: right;
+        font-size: 0.13rem;
+        margin-top: 0.09rem;
+        text-align: center;
+        line-height: 0.25rem;
+        color: #767d85;
+      }
+    }
+    // 搜索内容区
+    .search_content{
+      @include flex();
+      @include rect(100%,auto);
+      @include overflow();
+      .tag{
+        padding-left: 0.1rem;
+        h6{
+          @include flexbox();
+          align-items: center;
+          height: 0.54rem;
+          line-height: 0.5rem;
+          font-size: 0.12rem;
+          color: #666666;
+          overflow: hidden;
+          font-weight: normal;
+            img{
+              width: 0.15rem;
+              height: 0.18rem;
+              display: inline-block;
+              margin-right: 0.05rem;
+              position: relative;
+              top: 0.02rem;
+            }
+            span{
+              line-height: 0.54rem;
+              font-size: 0.12rem;
+              color: #666666;
+              padding-top: 0.05rem;
+            }
+        }
+        // 标签
+        ul{
+          li{
+            float: left;
+            width: 0.85rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            border: 1px solid #e6e6e6;
+            background-color: #fff;
+            font-size: 0.12rem;
+            color: #333;
+            padding: 0 0.16rem;
+            margin-right: 0.12rem;
+            border-radius: 0.03rem;
+            margin-bottom: 0.1rem;
+            a{
+              color: #333;
+              display: block;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
