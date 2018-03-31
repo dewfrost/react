@@ -58,7 +58,309 @@ html,body,#root,.App {
           margin-top: 0.08rem;
         }
       }
+      .content{
+        .space-carousel {
+          background: #eee;
+          overflow: hidden;
+        }
+        .my-carousel .v-item {
+          height: 0.36rem;
+          line-height: 0.36rem;
+          padding-left: 0;
+        }
+        .sub-title {
+          color: #888;
+          font-size: 0.14rem;
+          padding: 0.3rem 0 0.18rem 0;
+        }
+        .am-wingblank,.am-wingblank-lg{
+          margin: 0;
+        }
+        .index-nav{
+          background: #fff;
+          padding: 0.24rem 3.125% 0.06rem;
+          border-bottom: 1px solid #e6e6e6;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          li{
+            display: flex;
+            @include rect(auto,100%);
+            width:20%;
+            margin-bottom: 0.1rem;
+            a{
+              width:20%;
+              margin-bottom: 0.1rem;
+              @include text-color(#333);
+              @include rect(100%,100%);
+              @include flexbox();
+              @include flex-direction(column);
+              @include justify-content();
+              @include align-items();
+              img{
+                display: block;
+                width:65%;
+                margin: 0 auto;
+              }
+              span{
+                padding-top: 0.1rem;
+                text-align: center;
+                font-size: 0.12rem;
+                color: #333;
+                display: block;
+                height: 0.14rem;
+                line-height: 0.14rem;
+              }
+            }
+
+          }
+        }
+        .index-news {
+          padding: 0 0.18rem;
+          background-color: #fff;
+          height: 0.36rem;
+          line-height: 0.36rem;
+          border-bottom: 1px solid #e6e6e6;
+          overflow: hidden;
+          display: flex;
+          margin-bottom: 0.2rem;
+          .index-newsTitle{
+            position: relative;
+            span{
+              font-size: 0.14rem;
+              display: inline-block;
+              line-height: 0.36rem;
+              width: 0.3rem;
+            }
+            img{
+              position: absolute;
+              top:0.1rem;
+              height:0.14rem;
+              display: inline-block;
+              padding-right: 0.1rem;
+              border-right: 2px solid #eee;
+            }
+          }
+          .am-wingblank ,.am-wingblank-lg{
+            height:0.36rem;
+            width:100%;
+            margin-left: 0.5rem;
+          }
+        }
+        .index_goodsTitle{
+          position: relative;
+          height: 0.36rem;
+          line-height: 0.36rem;
+          overflow: hidden;
+          background-color: #fff;
+          border-bottom: 1px solid #e6e6e6;
+          display: flex;
+          margin-bottom: 0.1rem;
+          img{
+            width: 55%;
+            height: 55%;
+            margin: 0.09rem auto;
+          }
+          .a_jump{
+            position: absolute;
+            right: 3.75%;
+            top: 0;
+            font-size: 12px;
+            color: rgb(156, 48, 239);
+          }
+        }
+        .index-goodsUl{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li{
+            width: 49.2%;
+            background-color: #fff;
+            margin-top: 6px;
+            a{
+              display: block;
+              color: #333;
+              img{
+                width:100%;
+              }
+              p,span{
+                padding: 0.06rem 0 0 0.1rem;
+              }
+              span{
+                color: #bbbbbb;
+              }
+              p:nth-of-type(2){
+                color: red;
+                font-size: 0.14rem;
+              }
+            }
+
+
+          }
+        }
+      }
     }
+    .wallet-box{
+      header{
+        background:linear-gradient(#e50011 ,#ff5038);
+        height:1.5rem;
+        padding-top: 0.1rem;
+        h3{
+          color: #fff;
+          text-align: center;
+          font-size: 0.16rem;
+          font-weight: normal;
+        }
+        .iconfont{
+          display: block;
+          color: #fff;
+          text-align: center;
+          font-size: 0.2rem;
+          width: 0.4rem;
+          position: absolute;
+          top: 0.06rem;
+          left: 0;
+        }
+        h2{
+          font-size: 0.3rem;
+          height: 0.3rem;
+          line-height: 0.3rem;
+          text-align: center;
+          color: #fff;
+          font-weight: normal;
+          margin-top: 0.2rem;
+          margin-bottom: 0.1rem;
+        }
+        p{
+          text-align: center;
+          color: #fff;
+        }
+      }
+      .content{
+        position: absolute;
+        top:1.2rem;
+        .accountLiangbox {
+          padding: 0 4.6875%;
+
+          width:100%;
+          height:auto;
+          ul{
+            padding: 0.12rem;
+            display: flex;
+            background-color: #fff;
+            border-radius: 0.1rem;
+
+            width:100%;
+            z-index: 10!important;
+            li{
+              width:50%;
+              text-align: center;
+              overflow: hidden;
+              p {
+                font-size: 0.12rem;
+                color: #333;
+                height: 0.12rem;
+                line-height: 0.12rem;
+              }
+                h2 {
+                  font-size: 0.18rem;
+                  color: #e60012;
+                  height: 0.18rem;
+                  line-height: 0.18rem;
+                  text-align: center;
+                  font-weight: normal;
+                  margin-top: 0.1rem;
+                }
+            }
+            li:nth-of-type(1){
+                border-right: 1px solid #e60012;
+                width: 50%;
+                text-align: center;
+                overflow: hidden;
+            }
+          }
+        }
+        .am-wingblank{
+          display: flex;
+          height:0.4rem;
+          line-height: 0.4rem;
+          background: linear-gradient(to right, #ff6446 , #ff4c4a);
+          border-radius: 0.2rem;
+          margin-top: 0.1rem;
+          color: #fff;
+          span{
+            width:20%;
+            display: inline-block;
+            font-size: 0.2rem;
+            margin-right: -0.2rem;
+            margin-left: 0.2rem;
+          }
+          .slider{
+            width:80%;
+          }
+        }
+        .hongbao{
+          padding: 0 3.125%;
+          background-color: #fff;
+          border-bottom: 1px solid #e6e6e6;
+          height:0.5rem;
+          line-height: 0.5rem;
+          font-size: 0.14rem;
+          span{
+            font-size: 0.2rem;
+            margin-right: 0.1rem;
+            color: #e60012;
+          }
+        }
+        .accountNav{
+          padding: 0.21rem 7% 0;
+          border-bottom: 1px solid #e6e6e6;
+          display: flex;
+          background: #fff;
+          a{
+            width: 33%;
+            text-align: center;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+              display: block;
+              width:35%;
+              margin-bottom: 0.05rem;
+            }
+          }
+        }
+        .mybox_list{
+          background: #fff;
+          div{
+            padding: 0 3.125%;
+            border-bottom: 1px solid #e6e6e6;
+            height:0.52rem;
+            line-height: 0.52rem;
+            display:flex ;
+            justify-content: space-between;
+            background-color: #fff;
+            span{
+              color: #999;
+            }
+            p{
+              display: inline-block;
+              font-size: 0.14rem;
+              span{
+                margin-right: 0.1rem;
+                color: #e60012;
+                font-size: 0.2rem;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
   }
   footer{
     @include rect(100%,0.5rem);
