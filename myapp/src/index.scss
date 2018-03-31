@@ -59,7 +59,112 @@ html,body,#root,.App {
         }
       }
     }
+
+    //用户中心
+    //用户头部
+    .user-box{
+      padding-bottom: 0.57rem;
+      header{
+        @include rect(100%,auto);
+        //background: green;
+        .myHead{
+          @include rect(100%,1.45rem);
+
+          position: relative;
+          background: url(http://oto178.com/images/mybg.png) no-repeat center /cover;
+          //需要使用小图标
+          span{
+            display:inline-block;
+            @include rect(0.32rem,0.32rem);
+            color: #fff;
+            position:absolute;
+            @include line-height(0.32rem);
+            right:0.12rem;
+            top:0.07rem;
+            font-size:0.22rem;
+
+          }
+          //登录头像
+          .my-Box{
+              position:absolute;
+            top:0.32rem;
+
+            width:100%;
+            //登录头像图片
+            .my-Boximg{
+              width:20%;
+             margin-left:40%;
+              border-radius: 50%;
+              background-color: #fff;
+              img{
+                @include rect(100%,100%);
+                color: #fff;
+              }
+            }
+          }
+          //登录头像用户名
+          .my-Box-data{
+            // @include background-color(yellow);
+            @include rect(100%,0.30rem);
+            //padding-top: 0.09rem;
+            text-align: center;
+            line-height: 0.30rem;
+
+            b{
+              font-style: normal;
+              margin-left: 0.44rem;
+              float:left;
+              margin-right:0.1rem;
+              color: #fff;
+              font-size: 0.16rem;
+              font-weight: normal;
+            }
+            p{
+              float:left;
+              //vip的小图标
+              font-size: 0.14rem;
+              .icon-VIP{
+                display: inline-block;
+                @include rect(0.12rem,0.12rem);
+                color: yellow;
+                margin-right: 0.1rem;
+              }
+              i{
+                color:#fff;
+                font-size: 0.18rem;
+              }
+            }
+          }
+        }
+
+        //小图标
+        .myBox-order{
+          @include rect(100%,0.80rem);
+          @include flexbox();
+          justify-content: space-around;
+          @include align-content(center);
+          @include background-color(#fff);
+          border-bottom: 1px solid #e6e6e6;
+          padding: 0 3.125%;
+          .myBox-play{
+            @include flexbox();
+            @include flex-direction(column);
+            justify-content: center;
+            @include align-content(center);
+            img{
+              display: block;
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+        }
+
+      }
+    }
+    //详情页面
+
   }
+
   footer{
     @include rect(100%,0.5rem);
     @include background-color(#fff);
